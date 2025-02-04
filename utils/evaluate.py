@@ -24,7 +24,7 @@ def translate_sentence(model, sentence, italian_vocab, english_vocab, device, ma
     with torch.no_grad():
         hidden, cell = model.encoder(sentence_tensor)
 
-    outputs = [english_vocab.word2index["<sos>"]]
+    outputs = [english_vocab.word2index.get("<sos>", 3)]
 
     for _ in range(max_length):
         previous_word = torch.LongTensor([outputs[-1]]).to(device)
