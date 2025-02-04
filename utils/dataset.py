@@ -4,7 +4,6 @@ import spacy
 from sklearn.model_selection import train_test_split
 from torch.nn.utils.rnn import pad_sequence
 
-# Load spacy tokenizers
 spacy_it = spacy.load("it_core_news_sm")
 spacy_eng = spacy.load("en_core_web_sm")
 
@@ -45,6 +44,9 @@ class Vocabulary:
             self.word_count[word] = 1
         else:
             self.word_count[word] += 1
+
+    def __len__(self):
+        return len(self.word2index)
 
 def collate_fn(batch, italian_vocab, english_vocab):
     src_batch, tgt_batch = [], []

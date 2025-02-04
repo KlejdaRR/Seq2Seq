@@ -5,44 +5,46 @@ from nltk.translate.bleu_score import sentence_bleu
 def translate_sentence(model, sentence, italian_vocab, english_vocab, device, max_length=50):
     spacy_it = spacy.load("it_core_news_sm")
 
-    # Create tokens using spacy and everything in lower case (which is what our vocab is)
-    if type(sentence) == str:
+    if isinstance(sentence, str):
         tokens = [token.text.lower() for token in spacy_it(sentence)]
     else:
         tokens = [token.lower() for token in sentence]
 
-    # Add <SOS> and <EOS> in beginning and end respectively
-    tokens.insert(0, "<sos>")
-    tokens.append("<eos>")
+    # Debug: Print input tokens
+    print("Input tokens:", tokens)
 
+    tokens = ["<sos>"] + tokens + ["<eos>"]
     text_to_indices = [italian_vocab.word2index.get(token, 3) for token in tokens]  # 3 is <unk>
 
-    # Convert to Tensor
+    # Debug: Print input indices
+    print("Input indices:", text_to_indices)
+
     sentence_tensor = torch.LongTensor(text_to_indices).unsqueeze(0).to(device)
 
-    # Build encoder hidden, cell state
     with torch.no_grad():
-        hidden, cell = model.encoder(sentence_tensor)
+        hidden, cell, encoder_outputs = model.encoder(sentence_tensor)
 
-    outputs = [english_vocab.word2index.get("<sos>", 3)]
+    outputs = [english_vocab.word2index["<sos>"]]
 
     for _ in range(max_length):
         previous_word = torch.LongTensor([outputs[-1]]).to(device)
-
         with torch.no_grad():
-            output, hidden, cell = model.decoder(previous_word, hidden, cell)
+            output, hidden, cell = model.decoder(previous_word, hidden, cell, encoder_outputs)
             best_guess = output.argmax(1).item()
-
         outputs.append(best_guess)
 
-        # Model predicts it's the end of the sentence
         if best_guess == english_vocab.word2index["<eos>"]:
             break
 
+    # Debug: Print output indices
+    print("Output indices:", outputs)
+
     translated_sentence = [english_vocab.index2word[idx] for idx in outputs]
 
-    # remove start token
-    return translated_sentence[1:]
+    # Debug: Print translated sentence
+    print("Translated sentence:", translated_sentence)
+
+    return translated_sentence[1:]  # Exclude <sos>
 
 def bleu(data, model, italian_vocab, english_vocab, device):
     targets = []

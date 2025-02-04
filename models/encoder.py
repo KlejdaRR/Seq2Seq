@@ -10,4 +10,4 @@ class Encoder(nn.Module):
     def forward(self, x):
         embedding = self.dropout(self.embedding(x))
         outputs, (hidden, cell) = self.rnn(embedding)
-        return hidden, cell
+        return hidden, cell, outputs
