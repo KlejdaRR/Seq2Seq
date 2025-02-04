@@ -1,12 +1,13 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
 import spacy
-from sklearn.model_selection import train_test_split
 from torch.nn.utils.rnn import pad_sequence
 
+# Load SpaCy tokenizers for Italian and English
 spacy_it = spacy.load("it_core_news_sm")
 spacy_eng = spacy.load("en_core_web_sm")
 
+# Define a dataset class for handling parallel text data (Italian and English)
 class Multi30kDataset(Dataset):
     def __init__(self, source_file, target_file):
         with open(source_file, 'r', encoding='utf-8') as f:
@@ -26,12 +27,13 @@ def tokenize_it(text):
 def tokenize_eng(text):
     return [tok.text.lower() for tok in spacy_eng.tokenizer(text)]
 
+# Vocabulary class to store word-to-index and index-to-word mappings
 class Vocabulary:
     def __init__(self, min_freq=1):
         self.word2index = {"<pad>": 0, "<sos>": 1, "<eos>": 2, "<unk>": 3}
         self.index2word = {0: "<pad>", 1: "<sos>", 2: "<eos>", 3: "<unk>"}
         self.word_count = {}
-        self.min_freq = min_freq  # Ensure only frequent words are added
+        self.min_freq = min_freq
 
     def add_sentence(self, sentence):
         for word in sentence:
@@ -44,7 +46,7 @@ class Vocabulary:
                 self.word2index[word] = index
                 self.index2word[index] = word
 
-
+# Function to prepare a batch of data for training (converts text to tensor format)
 def collate_fn(batch, italian_vocab, english_vocab):
     src_batch, tgt_batch = [], []
     for src, tgt in batch:

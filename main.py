@@ -1,9 +1,9 @@
 from models.encoder import Encoder
-from models.LuongAttention import LuongAttention
 from models.Seq2SeqWithAttention import Seq2SeqWithAttention
 from models.DecoderWithAttention import DecoderWithAttention
 from utils.dataset import Multi30kDataset, tokenize_it, tokenize_eng, Vocabulary, collate_fn
 from utils.train import train_model, save_checkpoint
+from utils.evaluate import bleu
 from sklearn.model_selection import train_test_split
 import torch
 import torch.optim as optim
@@ -47,7 +47,6 @@ for epoch in range(100):
     loss = train_model(model, train_iterator, optimizer, criterion, device)
     print(f"Train Loss: {loss:.4f}")
 
-    # Reduce learning rate every 20 epochs
     if epoch % 20 == 0:
         for param_group in optimizer.param_groups:
             param_group['lr'] *= 0.7
@@ -61,8 +60,10 @@ for epoch in range(100):
 
         output_indices = output.argmax(2).squeeze().tolist()
         translated_sentence = [english_vocab.index2word.get(idx, "<unk>") for idx in output_indices]
-        print("Sample Translation:", " ".join(translated_sentence))
 
     # Save checkpoint
     checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
     save_checkpoint(checkpoint, filename="my_checkpoint.pth")
+
+bleu_score = bleu(test_data, model, italian_vocab, english_vocab, device)
+print(f"\nFinal BLEU Score on Test Data: {bleu_score:.4f}")

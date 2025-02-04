@@ -1,7 +1,6 @@
 import torch
-import torch.optim as optim
-from torch.nn.utils import clip_grad_norm_
 
+# Function to train the model for one epoch
 def train_model(model, iterator, optimizer, criterion, device):
     model.train()
     total_loss = 0
@@ -18,6 +17,7 @@ def train_model(model, iterator, optimizer, criterion, device):
         total_loss += loss.item()
     return total_loss / len(iterator)
 
+# Function to evaluate the model on a validation/test set
 def evaluate_model(model, iterator, criterion, device):
     model.eval()
     total_loss = 0
@@ -31,13 +31,15 @@ def evaluate_model(model, iterator, criterion, device):
             total_loss += loss.item()
     return total_loss / len(iterator)
 
+# Function to save a model checkpoint
 def save_checkpoint(state, filename="my_checkpoint.pth"):
     print("=> Saving checkpoint")
     torch.save(state, filename)
 
+# Function to load a model checkpoint
 def load_checkpoint(checkpoint, model, optimizer=None):
     print("=> Loading checkpoint")
     model.load_state_dict(checkpoint["state_dict"])
 
-    if optimizer is not None and "optimizer" in checkpoint:  # Add this condition
+    if optimizer is not None and "optimizer" in checkpoint:
         optimizer.load_state_dict(checkpoint["optimizer"])

@@ -162,9 +162,9 @@ I wept.
 I wept.
 I work.
 I work.
-I'm 19.
-I'm 19.
-I'm OK.
+I am 19.
+I am 19.
+I am OK.
 Listen.
 Listen.
 Listen.
@@ -396,35 +396,35 @@ I stood.
 I stood.
 I swore.
 I swore.
-I'll go.
-I'll go.
-I'm Tom.
-I'm Tom.
-I'm fat.
-I'm fat.
-I'm fat.
-I'm fat.
-I'm fit.
-I'm fit.
-I'm hit!
-I'm hit!
-I'm hot.
-I'm hot.
-I'm ill.
-I'm ill.
-I'm ill.
-I'm ill.
-I'm old.
-I'm old.
-I'm old.
-I'm old.
-I'm sad.
-I'm sad.
-I'm shy.
-I'm shy.
-I'm shy.
-I'm shy.
-It's OK.
+I will go.
+I will go.
+I am Tom.
+I am Tom.
+I am fat.
+I am fat.
+I am fat.
+I am fat.
+I am fit.
+I am fit.
+I am hit!
+I am hit!
+I am hot.
+I am hot.
+I am ill.
+I am ill.
+I am ill.
+I am ill.
+I am old.
+I am old.
+I am old.
+I am old.
+I am sad.
+I am sad.
+I am shy.
+I am shy.
+I am shy.
+I am shy.
+It is OK.
 Join me.
 Join me.
 Join me.
@@ -646,9 +646,9 @@ Dig here.
 Dig here.
 Dig here.
 Dig here.
-Don't go.
-Don't go.
-Don't go.
+Do not go.
+Do not go.
+Do not go.
 Drink it.
 Drink it.
 Drink it.
@@ -736,8 +736,8 @@ He tried.
 He tried.
 He tries.
 He tries.
-He's wet.
-He's wet.
+He is wet.
+He is wet.
 Help Tom.
 Help Tom.
 Help Tom.
@@ -866,148 +866,148 @@ I winked.
 I winked.
 I yawned.
 I yawned.
-I'll die.
-I'll die.
-I'll pay.
-I'll pay.
-I'll win.
-I'll win.
-I'm a DJ.
-I'm a DJ.
-I'm a DJ.
-I'm a DJ.
-I'm back.
-I'm back.
-I'm back.
-I'm bald.
-I'm bald.
-I'm bald.
-I'm bald.
-I'm busy.
-I'm busy.
-I'm busy.
-I'm busy.
-I'm busy.
-I'm busy.
-I'm busy.
-I'm busy.
-I'm calm.
-I'm calm.
-I'm calm.
-I'm calm.
-I'm cold.
-I'm cool.
-I'm cool.
-I'm cool.
-I'm cool.
-I'm deaf.
-I'm deaf.
-I'm deaf.
-I'm deaf.
-I'm done.
-I'm done.
-I'm easy.
-I'm fast.
-I'm fast.
-I'm fine.
-I'm fine.
-I'm free!
-I'm free.
-I'm free.
-I'm free.
-I'm free.
-I'm full.
-I'm full.
-I'm full.
-I'm full.
-I'm glad.
-I'm glad.
-I'm glad.
-I'm glad.
-I'm glad.
-I'm here.
-I'm here.
-I'm here.
-I'm here.
-I'm home.
-I'm home.
-I'm hurt.
-I'm hurt.
-I'm hurt.
-I'm hurt.
-I'm late.
-I'm late.
-I'm lazy.
-I'm lazy.
-I'm lazy.
-I'm lazy.
-I'm lost.
-I'm lost.
-I'm lost.
-I'm lost.
-I'm mean.
-I'm mean.
-I'm mean.
-I'm mean.
-I'm numb.
-I'm numb.
-I'm numb.
-I'm numb.
-I'm numb.
-I'm numb.
-I'm poor.
-I'm poor.
-I'm poor.
-I'm poor.
-I'm rich.
-I'm rich.
-I'm rich.
-I'm rich.
-I'm safe.
-I'm safe.
-I'm sick.
-I'm sick.
-I'm sick.
-I'm sick.
-I'm slow.
-I'm slow.
-I'm slow.
-I'm slow.
-I'm sure.
-I'm thin.
-I'm thin.
-I'm thin.
-I'm thin.
-I'm tidy.
-I'm tidy.
-I'm tidy.
-I'm tidy.
-I'm ugly.
-I'm ugly.
-I'm weak.
-I'm weak.
-I'm wise.
-I'm wise.
-I'm wise.
-I'm wise.
+I will die.
+I will die.
+I will pay.
+I will pay.
+I will win.
+I will win.
+I am a DJ.
+I am a DJ.
+I am a DJ.
+I am a DJ.
+I am back.
+I am back.
+I am back.
+I am bald.
+I am bald.
+I am bald.
+I am bald.
+I am busy.
+I am busy.
+I am busy.
+I am busy.
+I am busy.
+I am busy.
+I am busy.
+I am busy.
+I am calm.
+I am calm.
+I am calm.
+I am calm.
+I am cold.
+I am cool.
+I am cool.
+I am cool.
+I am cool.
+I am deaf.
+I am deaf.
+I am deaf.
+I am deaf.
+I am done.
+I am done.
+I am easy.
+I am fast.
+I am fast.
+I am fine.
+I am fine.
+I am free!
+I am free.
+I am free.
+I am free.
+I am free.
+I am full.
+I am full.
+I am full.
+I am full.
+I am glad.
+I am glad.
+I am glad.
+I am glad.
+I am glad.
+I am here.
+I am here.
+I am here.
+I am here.
+I am home.
+I am home.
+I am hurt.
+I am hurt.
+I am hurt.
+I am hurt.
+I am late.
+I am late.
+I am lazy.
+I am lazy.
+I am lazy.
+I am lazy.
+I am lost.
+I am lost.
+I am lost.
+I am lost.
+I am mean.
+I am mean.
+I am mean.
+I am mean.
+I am numb.
+I am numb.
+I am numb.
+I am numb.
+I am numb.
+I am numb.
+I am poor.
+I am poor.
+I am poor.
+I am poor.
+I am rich.
+I am rich.
+I am rich.
+I am rich.
+I am safe.
+I am safe.
+I am sick.
+I am sick.
+I am sick.
+I am sick.
+I am slow.
+I am slow.
+I am slow.
+I am slow.
+I am sure.
+I am thin.
+I am thin.
+I am thin.
+I am thin.
+I am tidy.
+I am tidy.
+I am tidy.
+I am tidy.
+I am ugly.
+I am ugly.
+I am weak.
+I am weak.
+I am wise.
+I am wise.
+I am wise.
+I am wise.
 It helps.
 It hurts.
 It hurts.
 It works.
-It's Tom.
-It's big.
-It's fun.
-It's his.
-It's his.
-It's hot.
-It's hot.
-It's new.
-It's new.
-It's odd.
-It's odd.
-It's red.
-It's red.
-It's sad.
+It is Tom.
+It is big.
+It is fun.
+It is his.
+It is his.
+It is hot.
+It is hot.
+It is new.
+It is new.
+It is odd.
+It is odd.
+It is red.
+It is red.
+It is sad.
 Keep out.
 Kill Tom.
 Kill Tom.
@@ -1027,8 +1027,6 @@ Leave me.
 Leave us.
 Leave us.
 Leave us.
-Let's go!
-Let's go.
 Look out!
 Look out!
 Marry me.

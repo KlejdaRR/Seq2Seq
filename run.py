@@ -1,17 +1,11 @@
 import torch
 import spacy
 from models.encoder import Encoder as Encoder
-from models.decoder import Decoder as Decoder
-from models.seq2seq import Seq2Seq
-from models.LuongAttention import LuongAttention
 from models.Seq2SeqWithAttention import Seq2SeqWithAttention
 from models.DecoderWithAttention import DecoderWithAttention
 from utils.dataset import Vocabulary
 from utils.evaluate import translate_sentence
 from utils.train import load_checkpoint
-from utils.dataset import Multi30kDataset
-from sklearn.model_selection import train_test_split
-
 spacy_it = spacy.load("it_core_news_sm")
 spacy_eng = spacy.load("en_core_web_sm")
 
@@ -26,17 +20,17 @@ def tokenize_eng(text):
 
 torch.serialization.add_safe_globals([Vocabulary])
 
-# Load vocabularies
+# Loading vocabularies
 italian_vocab = torch.load("italian_vocab.pth", weights_only=False)
 english_vocab = torch.load("english_vocab.pth", weights_only=False)
 
-# Load model architecture
+# Loading model architecture
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 encoder_net = Encoder(len(italian_vocab.word2index), 300, 1024, 2, 0.5).to(device)
 decoder_net = DecoderWithAttention(len(english_vocab.word2index), 300, 1024, len(english_vocab.word2index), 2, 0.5).to(device)
 model = Seq2SeqWithAttention(encoder_net, decoder_net).to(device)
 
-# Load trained model checkpoint
+# Loading trained model checkpoint
 checkpoint = torch.load("my_checkpoint.pth", map_location=device)
 load_checkpoint(checkpoint, model, optimizer=None)
 model.eval()  # Set model to evaluation mode
@@ -49,6 +43,6 @@ def translate_user_input(model, italian_vocab, english_vocab, device):
         translated_sentence = translate_sentence(model, sentence, italian_vocab, english_vocab, device)
         print("Translated Sentence:", " ".join(translated_sentence))
 
-# Start interactive translation
+# Starting interactive translation
 translate_user_input(model, italian_vocab, english_vocab, device)
 
