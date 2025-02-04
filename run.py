@@ -25,13 +25,11 @@ def tokenize_it(text):
 def tokenize_eng(text):
     return [tok.text.lower() for tok in spacy_eng.tokenizer(text)]
 
-# Load vocabularies
-italian_vocab = Vocabulary()
-english_vocab = Vocabulary()
+torch.serialization.add_safe_globals([Vocabulary])
 
-for src, tgt in train_data:
-    italian_vocab.add_sentence(tokenize_it(src))
-    english_vocab.add_sentence(tokenize_eng(tgt))
+# Load vocabularies
+italian_vocab = torch.load("italian_vocab.pth", weights_only=False)
+english_vocab = torch.load("english_vocab.pth", weights_only=False)
 
 # Load model architecture
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

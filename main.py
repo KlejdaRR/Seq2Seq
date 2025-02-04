@@ -41,3 +41,8 @@ for epoch in range(100):
     print(f"Loss: {loss:.4f}")
     checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
     save_checkpoint(checkpoint, filename="my_checkpoint.pth")
+
+
+# Save vocabularies for consistency during inference
+torch.save(italian_vocab, "italian_vocab.pth")
+torch.save(english_vocab, "english_vocab.pth")

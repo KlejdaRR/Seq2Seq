@@ -3,12 +3,11 @@ import spacy
 from nltk.translate.bleu_score import sentence_bleu
 
 def translate_sentence(model, sentence, italian_vocab, english_vocab, device, max_length=50):
-    # Load german tokenizer
-    spacy_ger = spacy.load("it_core_news_sm")
+    spacy_it = spacy.load("it_core_news_sm")
 
     # Create tokens using spacy and everything in lower case (which is what our vocab is)
     if type(sentence) == str:
-        tokens = [token.text.lower() for token in spacy_ger(sentence)]
+        tokens = [token.text.lower() for token in spacy_it(sentence)]
     else:
         tokens = [token.lower() for token in sentence]
 
@@ -16,7 +15,6 @@ def translate_sentence(model, sentence, italian_vocab, english_vocab, device, ma
     tokens.insert(0, "<sos>")
     tokens.append("<eos>")
 
-    # Go through each german token and convert to an index
     text_to_indices = [italian_vocab.word2index.get(token, 3) for token in tokens]  # 3 is <unk>
 
     # Convert to Tensor
@@ -46,7 +44,7 @@ def translate_sentence(model, sentence, italian_vocab, english_vocab, device, ma
     # remove start token
     return translated_sentence[1:]
 
-def bleu(data, model, german_vocab, english_vocab, device):
+def bleu(data, model, italian_vocab, english_vocab, device):
     targets = []
     outputs = []
 
@@ -54,7 +52,7 @@ def bleu(data, model, german_vocab, english_vocab, device):
         src = example[0]  # Source sentence
         trg = example[1]  # Target sentence
 
-        prediction = translate_sentence(model, src, german_vocab, english_vocab, device)
+        prediction = translate_sentence(model, src, italian_vocab, english_vocab, device)
         prediction = prediction[:-1]  # remove <eos> token
 
         targets.append([trg.split()])
