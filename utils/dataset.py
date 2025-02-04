@@ -27,26 +27,23 @@ def tokenize_eng(text):
     return [tok.text.lower() for tok in spacy_eng.tokenizer(text)]
 
 class Vocabulary:
-    def __init__(self):
+    def __init__(self, min_freq=1):
         self.word2index = {"<pad>": 0, "<sos>": 1, "<eos>": 2, "<unk>": 3}
         self.index2word = {0: "<pad>", 1: "<sos>", 2: "<eos>", 3: "<unk>"}
         self.word_count = {}
+        self.min_freq = min_freq  # Ensure only frequent words are added
 
     def add_sentence(self, sentence):
         for word in sentence:
-            self.add_word(word)
+            self.word_count[word] = self.word_count.get(word, 0) + 1
 
-    def add_word(self, word):
-        if word not in self.word2index:
-            index = len(self.word2index)
-            self.word2index[word] = index
-            self.index2word[index] = word
-            self.word_count[word] = 1
-        else:
-            self.word_count[word] += 1
+    def finalize_vocab(self):
+        for word, count in self.word_count.items():
+            if count >= self.min_freq:
+                index = len(self.word2index)
+                self.word2index[word] = index
+                self.index2word[index] = word
 
-    def __len__(self):
-        return len(self.word2index)
 
 def collate_fn(batch, italian_vocab, english_vocab):
     src_batch, tgt_batch = [], []

@@ -1,18 +1,16 @@
 from models.encoder import Encoder
-from models.decoder import Decoder
-from models.seq2seq import Seq2Seq
 from models.LuongAttention import LuongAttention
 from models.Seq2SeqWithAttention import Seq2SeqWithAttention
 from models.DecoderWithAttention import DecoderWithAttention
 from utils.dataset import Multi30kDataset, tokenize_it, tokenize_eng, Vocabulary, collate_fn
-from utils.train import train_model, save_checkpoint, evaluate_model
+from utils.train import train_model, save_checkpoint
 from sklearn.model_selection import train_test_split
 import torch
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 
-# Load dataset
-dataset = Multi30kDataset('data/train.en.txt', 'data/train.it.txt')
+# Load dataset (Italian -> English)
+dataset = Multi30kDataset('data/train.it.txt', 'data/train.en.txt')
 train_data, temp_data = train_test_split(dataset, test_size=0.2, random_state=42)
 valid_data, test_data = train_test_split(temp_data, test_size=0.5, random_state=42)
 
@@ -24,13 +22,11 @@ for src, tgt in train_data:
     italian_vocab.add_sentence(tokenize_it(src))
     english_vocab.add_sentence(tokenize_eng(tgt))
 
-# Print vocabulary sizes
-print("Italian Vocabulary Size:", len(italian_vocab))
-print("English Vocabulary Size:", len(english_vocab))
+italian_vocab.finalize_vocab()
+english_vocab.finalize_vocab()
 
-# Print some words from the vocabulary
-print("Sample Italian Words:", list(italian_vocab.word2index.keys())[:10])
-print("Sample English Words:", list(english_vocab.word2index.keys())[:10])
+torch.save(italian_vocab, "italian_vocab.pth")
+torch.save(english_vocab, "english_vocab.pth")
 
 # Create data loaders
 train_iterator = DataLoader(train_data, batch_size=64, shuffle=True, collate_fn=lambda x: collate_fn(x, italian_vocab, english_vocab), drop_last=True)
@@ -46,18 +42,27 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = torch.nn.CrossEntropyLoss(ignore_index=0)
 
 # Training loop
-best_valid_loss = float('inf')
 for epoch in range(100):
     print(f"[Epoch {epoch + 1}/100]")
-    train_loss = train_model(model, train_iterator, optimizer, criterion, device)
-    valid_loss = evaluate_model(model, valid_iterator, criterion, device)
-    print(f"Train Loss: {train_loss:.4f}, Valid Loss: {valid_loss:.4f}")
+    loss = train_model(model, train_iterator, optimizer, criterion, device)
+    print(f"Train Loss: {loss:.4f}")
 
-    if valid_loss < best_valid_loss:
-        best_valid_loss = valid_loss
-        checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
-        save_checkpoint(checkpoint, filename="my_checkpoint.pth")
+    # Reduce learning rate every 20 epochs
+    if epoch % 20 == 0:
+        for param_group in optimizer.param_groups:
+            param_group['lr'] *= 0.7
 
-# Save vocabularies for consistency during inference
-torch.save(italian_vocab, "italian_vocab.pth")
-torch.save(english_vocab, "english_vocab.pth")
+    if epoch % 10 == 0:
+        with torch.no_grad():
+            sample_src, sample_tgt = next(iter(train_iterator))
+            sample_src = sample_src[0].unsqueeze(0).to(device)
+            sample_tgt = sample_tgt[0].unsqueeze(0).to(device)
+            output = model(sample_src, sample_tgt, teacher_force_ratio=0)  # No teacher forcing in inference
+
+        output_indices = output.argmax(2).squeeze().tolist()
+        translated_sentence = [english_vocab.index2word.get(idx, "<unk>") for idx in output_indices]
+        print("Sample Translation:", " ".join(translated_sentence))
+
+    # Save checkpoint
+    checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
+    save_checkpoint(checkpoint, filename="my_checkpoint.pth")

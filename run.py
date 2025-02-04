@@ -38,7 +38,7 @@ model = Seq2SeqWithAttention(encoder_net, decoder_net).to(device)
 
 # Load trained model checkpoint
 checkpoint = torch.load("my_checkpoint.pth", map_location=device)
-load_checkpoint(checkpoint, model, optimizer=None)  # No need for optimizer in inference mode
+load_checkpoint(checkpoint, model, optimizer=None)
 model.eval()  # Set model to evaluation mode
 
 def translate_user_input(model, italian_vocab, english_vocab, device):
