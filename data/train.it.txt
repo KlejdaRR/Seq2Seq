@@ -1,0 +1,1037 @@
+Ciao!
+Ciao.
+Corri!
+Corra!
+Correte!
+Chi?
+Wow!
+Amore!
+Tesoro!
+Immergiti!
+Si immerga!
+Immergetevi!
+Tuffati!
+Si tuffi!
+Tuffatevi!
+Salta!
+Salti!
+Saltate!
+Salta.
+Salti.
+Saltate.
+Resta.
+Stai.
+Stia.
+State.
+Resti.
+Restate.
+Rimani.
+Rimanga.
+Rimanete.
+Fermati!
+Fermatevi!
+Stop!
+Si fermi!
+Aspetta!
+Aspettate!
+Aspetti!
+Aspetta.
+Aspetti.
+Aspettate.
+Fallo.
+Falla.
+Lo faccia.
+La faccia.
+Fatelo.
+Fatela.
+Vai avanti.
+Continua.
+Continui.
+Continuate.
+Vada avanti.
+Andate avanti.
+Buongiorno!
+Ciao!
+Salve.
+Ciao.
+Mi sono nascosto.
+Mi sono nascosta.
+Mi nascosi.
+Ho corso.
+Corsi.
+Capisco.
+Io capisco.
+Provo.
+Io provo.
+Ho vinto!
+Ho vinto.
+Vinsi.
+Oh no!
+Rilassati.
+Si rilassi.
+Rilassatevi.
+Spara!
+Spari!
+Sparate!
+Sorridi.
+Sorrida.
+Sorridete.
+Chiedimi.
+Mi chieda.
+Chiedetemi.
+Attacca!
+Attaccate!
+Attacchi!
+Alla vostra!
+Salute!
+Alla tua!
+Alla sua!
+Mangialo.
+Mangiala.
+Lo mangi.
+La mangi.
+Mangiatelo.
+Mangiatela.
+Finisci di mangiare.
+Finisca di mangiare.
+Finite di mangiare.
+Espira.
+Fermo!
+Ferma!
+Fermi!
+Ferme!
+Che nessuno si muova!
+Alzati.
+Vai ora.
+Vai adesso.
+Vada ora.
+Vada adesso.
+Andate ora.
+Andate adesso.
+Capito!
+Capita!
+Corse.
+Salta su.
+Saltate su.
+Salti su.
+Abbracciami.
+Mi abbracci.
+Abbracciatemi.
+Mi importa.
+A me importa.
+Sono caduta.
+Sono caduto.
+Io sono caduto.
+Io sono caduta.
+Caddi.
+Io caddi.
+Sono fuggito.
+Sono fuggita.
+Fuggii.
+Lavoro a maglia.
+Io lavoro a maglia.
+Lavoro ai ferri.
+Io lavoro ai ferri.
+Lo so.
+Io lo so.
+Sono partito.
+Io sono partito.
+Sono partita.
+Io sono partita.
+Partii.
+Io partii.
+Me ne sono andato.
+Io me ne sono andato.
+Me ne sono andata.
+Io me ne sono andata.
+Me ne andai.
+Io me ne andai.
+Ho mentito.
+Io ho mentito.
+Mentii.
+Io mentii.
+Ho perso.
+Io ho perso.
+Persi.
+Io persi.
+Ho pagato.
+Pagai.
+Mi licenzio.
+Nuoto.
+Ho pianto.
+Piansi.
+Io lavoro.
+Lavoro.
+Ho diciannove anni.
+Ho 19 anni.
+Sto bene.
+Ascolta!
+Ascoltate!
+Ascolti!
+È impossibile.
+Veramente?
+Davvero?
+Grazie!
+Grazie!
+Provalo.
+Provala.
+Lo provi.
+La provi.
+Provatelo.
+Provatela.
+Abbiamo mangiato.
+Noi abbiamo mangiato.
+Mangiammo.
+Noi mangiammo.
+Ci siamo nascosti.
+Ci siamo nascoste.
+Ci nascondemmo.
+Abbiamo corso.
+Corremmo.
+Proviamo.
+Ci proviamo.
+Noi proviamo.
+Abbiamo vinto.
+Noi abbiamo vinto.
+Vincemmo.
+Noi vincemmo.
+Perché io?
+Chiedi a Tom.
+Chiedete a Tom.
+Chieda a Tom.
+Chiedilo a Tom.
+Chiedetelo a Tom.
+Lo chieda a Tom.
+Chiediglielo.
+Glielo chieda.
+Chiedeteglielo.
+Chiedilo a lui.
+Lo chieda a lui.
+Chiedetelo a lui.
+Fantastico!
+Spettacolare!
+Sii calmo.
+Sii calma.
+Sia calmo.
+Sia calma.
+Siate calmi.
+Siate calme.
+Atteggiati.
+Sii imparziale.
+Sia imparziale.
+Siate imparziali.
+Sii gentile.
+Sia gentile.
+Siate gentili.
+Sii gentile.
+Sia gentile.
+Siate gentili.
+Sparisci.
+Brucialo.
+Bruciala.
+Lo bruci.
+La bruci.
+Bruciatelo.
+Bruciatela.
+Seppelliscilo.
+Seppelliscila.
+Lo seppellisca.
+La seppellisca.
+Seppellitelo.
+Seppellitela.
+Chiamami.
+Chiamatemi.
+Mi chiami.
+Chiamaci.
+Ci chiami.
+Chiamateci.
+Entrate!
+Entra!
+Entri!
+Vieni dentro.
+Venite dentro.
+Venga dentro.
+Entrate.
+Forza!
+Vada!
+Andate!
+Fai questo.
+Faccia questo.
+Fate questo.
+Mollalo!
+Mollala!
+Lo molli!
+La molli!
+Mollatelo!
+Mollatela!
+Dacci da mangiare.
+Ci dia da mangiare.
+Dateci da mangiare.
+Ripiegalo.
+Ripiegala.
+Lo ripieghi.
+La ripieghi.
+Ripiegatelo.
+Ripiegatela.
+Prendi Tom.
+Prenda Tom.
+Prendete Tom.
+Vattene!
+Andatevene!
+Esci!
+Se ne vada!
+Vattene fuori!
+Se ne vada fuori!
+Andatevene fuori!
+Uscite!
+Esca!
+Esci.
+Vattene.
+Uscite.
+Esca.
+Vattene!
+Andatevene!
+Vai via!
+Se ne vada!
+Vada via!
+Andate via!
+Vattene.
+Se ne vada.
+Andatevene.
+Vai via.
+Andate via.
+Vada via.
+Torna indietro.
+Tornate indietro.
+Torni indietro.
+Vai a casa.
+Vada a casa.
+Andate a casa.
+Vai lentamente.
+Vada lentamente.
+Andate lentamente.
+Arrivederci.
+Ciao!
+Arrivederci.
+Aspetta!
+Aspettate!
+Aspetti!
+Attendi!
+Attenda!
+Attendete!
+Aspetta!
+Aspettate!
+Aspetti!
+Attendi!
+Attenda!
+Attendete!
+È venuto.
+Lui è venuto.
+Lui è partito.
+Corre.
+Lui corre.
+Aiutatemi!
+Mi aiuti!
+Aiutami.
+Mi aiuti.
+Aiutatemi.
+Aiutateci.
+Aiutaci.
+Ci aiuti.
+Colpisci Tom.
+Colpisca Tom.
+Colpite Tom.
+Aspetta!
+Aspettate!
+Aspetti!
+Aspetta un attimo!
+Aspetti un attimo!
+Aspettate un attimo!
+Un attimo!
+Com'è triste!
+Abbraccia Tom.
+Abbracci Tom.
+Abbracciate Tom.
+Io sono d'accordo.
+Mi sono inchinato.
+Mi sono inchinata.
+Mi inchinai.
+Ho pianto.
+Piansi.
+Ho dormicchiato.
+Dormicchiai.
+Ho sonnecchiato.
+Sonnecchiai.
+Guido.
+Io guido.
+Ho guidato.
+Io ho guidato.
+Guidai.
+Ho sparato.
+Sparai.
+Mi sono mosso.
+Mi sono mossa.
+Mi sono trasferito.
+Mi sono trasferita.
+Mi mossi.
+Mi trasferii.
+Ho dormito.
+Io ho dormito.
+Dormii.
+Io dormii.
+Io fumo.
+Fumo.
+Russo.
+Io russo.
+Puzzo.
+Io puzzo.
+Mi sono alzata.
+Mi sono alzato.
+Mi alzai.
+Mi sono alzato in piedi.
+Mi sono alzata in piedi.
+Mi alzai in piedi.
+Sono stato in piedi.
+Sono stata in piedi.
+Stetti in piedi.
+Ho giurato.
+Giurai.
+Andrò.
+Io andrò.
+Sono Tom.
+Io sono Tom.
+Sono grasso.
+Io sono grasso.
+Sono grassa.
+Io sono grassa.
+Sono in forma.
+Io sono in forma.
+Sono stato colpito!
+Sono stata colpita!
+Ho caldo.
+Io ho caldo.
+Sono malato.
+Sono malata.
+Sto male.
+Sono ammalato.
+Sono vecchio.
+Sono vecchia.
+Io sono vecchio.
+Io sono vecchia.
+Sono triste.
+Io sono triste.
+Sono timido.
+Io sono timido.
+Sono timida.
+Io sono timida.
+Va bene.
+Unisciti a me.
+Si unisca a me.
+Unitevi a me.
+Unisciti a noi.
+Tienilo.
+Lo tenga.
+Tenetelo.
+Tienila.
+La tenga.
+Tenetela.
+Calcialo.
+Calciala.
+Lo calci.
+La calci.
+Calciatelo.
+Calciatela.
+Uccidilo.
+Uccidila.
+Lo uccida.
+La uccida.
+Uccidetelo.
+Uccidetela.
+Baciami.
+Baciatemi.
+Mi baci.
+Chiudilo a chiave.
+Chiudila a chiave.
+Lo chiuda a chiave.
+Chiudetelo a chiave.
+La chiuda a chiave.
+Chiudetela a chiave.
+Anch'io.
+Anche io.
+Pure io.
+Apriti.
+Apritevi.
+Si apra.
+Apri.
+Apra.
+Aprite.
+Confidati.
+Si confidi.
+Confidatevi.
+Perfetto!
+Tiralo.
+Tirala.
+Lo tiri.
+La tiri.
+Tiratelo.
+Tiratela.
+Spingilo.
+Spingila.
+Lo spinga.
+La spinga.
+Spingetelo.
+Spingetela.
+Interrogami.
+Interrogatemi.
+Mi interroghi.
+Arrivederci.
+Ci si vede!
+Arrivederci.
+Ci si vede!
+Ci vediamo.
+Fammi vedere.
+Mostrami.
+Fatemi vedere.
+Mi faccia vedere.
+Mostratemi.
+Mi mostri.
+Taci!
+Stai zitto!
+Stai zitta!
+Stia zitto!
+Stia zitta!
+State zitti!
+State zitte!
+Silenzio!
+Tacete!
+Taccia!
+Sta' zitto!
+Firmalo.
+Firmala.
+Lo firmi.
+La firmi.
+Firmatelo.
+Firmatela.
+Iscriviti.
+Si iscriva.
+Iscrivetevi.
+Saltalo.
+Saltala.
+Lo salti.
+La salti.
+Saltatelo.
+Saltatela.
+A tra poco!
+Smettila!
+La smetta!
+Smettetela!
+Prendilo!
+Lo prenda!
+Prendetelo!
+Riordina.
+Riordini.
+Riordinate.
+Tom ha mangiato.
+Tom mangiò.
+Tom si nascose.
+Tom ha corso.
+Tom corse.
+Tom ha vinto.
+Tom vinse.
+Ha vinto Tom.
+Vinse Tom.
+Aspetta.
+Aspetti.
+Aspettate.
+Sveglia!
+Svegliati!
+Svegliatevi!
+Si svegli!
+Alzati.
+Svegliati.
+Si svegli.
+Svegliatevi.
+Lavati.
+Lavatevi.
+Si lavi.
+A noi importa.
+Lo sappiamo.
+Noi lo sappiamo.
+Sappiamo.
+Noi sappiamo.
+Abbiamo perso.
+Noi abbiamo perso.
+Perdemmo.
+Noi perdemmo.
+Benvenuto!
+Benvenuta!
+Benvenuti!
+Benvenute!
+Ben arrivato!
+Chi ha mangiato?
+Chi ha corso?
+Chi ha vinto?
+Perché no?
+Corri.
+Correte.
+Corra.
+Hai vinto.
+Ha vinto.
+Avete vinto.
+Sono grasso?
+Io sono grasso?
+Sono grassa?
+Io sono grassa?
+Chiedilo a loro.
+Lo chieda a loro.
+Chiedetelo a loro.
+Stai indietro!
+Stia indietro!
+State indietro!
+Indietreggia.
+Indietreggi.
+Indietreggiate.
+Tirati indietro.
+Si tiri indietro.
+Tiratevi indietro.
+Sii coraggioso.
+Sii coraggiosa.
+Sia coraggioso.
+Sia coraggiosa.
+Siate coraggiosi.
+Siate coraggiose.
+Siate brevi.
+Sii breve.
+Sia breve.
+Sii rapido.
+Sii rapida.
+Sia rapido.
+Sia rapida.
+Siate rapidi.
+Siate rapide.
+Stai fermo.
+Stai ferma.
+Stia fermo.
+Stia ferma.
+State fermi.
+State ferme.
+Levati dai piedi.
+Si levi dai piedi.
+Levatevi dai piedi.
+Arrivederci, Tom.
+Ci vediamo, Tom.
+Ci si vede, Tom.
+Chiama Tom.
+Chiami Tom.
+Chiamate Tom.
+Posso andare?
+Catturami.
+Mi catturi.
+Catturatemi.
+Coraggio!
+Su col morale!
+Su con la vita!
+Calmati!
+Rilassati!
+Rilassatevi!
+Si rilassi!
+Si calmi!
+Calmatevi!
+Ammanettalo.
+Lo ammanetti.
+Ammanettatelo.
+Scava qui.
+Scava qua.
+Scavate qui.
+Scavate qua.
+Scavi qui.
+Scavi qua.
+Non andare.
+Non andate.
+Non vada.
+Bevilo.
+Bevila.
+Lo beva.
+La beva.
+Bevetelo.
+Bevetela.
+Continua a guidare.
+Continui a guidare.
+Continuate a guidare.
+Mangia qui.
+Mangia qua.
+Mangi qui.
+Mangi qua.
+Mangiate qui.
+Mangiate qua.
+Mangia di più.
+Mangiate di più.
+Mangi di più.
+Mangiane un po'.
+Ne mangi un po'.
+Mangiatene un po'.
+Trova Tom.
+Trovate Tom.
+Trovi Tom.
+Ripara questo.
+Riparate questo.
+Ripari questo.
+Fissa questo.
+Fissate questo.
+Fissi questo.
+Vattene!
+Andatevene!
+Vai via!
+Vattene.
+Se ne vada.
+Andatevene.
+Vai via.
+Andate via.
+Vada via.
+Se ne vada!
+Vada via!
+Andate via!
+Vieni giù!
+Venite giù!
+Venga giù!
+Smamma!
+Smammate!
+Smammi!
+Smamma.
+Smammi.
+Smammate.
+Sgomma.
+Sgommate.
+Sgommi.
+Vai al diavolo.
+Vada al diavolo.
+Andate al diavolo.
+Sii realista.
+Sia realista.
+Siate realisti.
+Siate realiste.
+Vai pure!
+Vada pure!
+Andate pure!
+Vai pure.
+Vai avanti.
+Vai lì.
+Vada lì.
+Andate lì.
+Buon lavoro!
+Agguanta Tom.
+Agguantate Tom.
+Agguanti Tom.
+Afferralo.
+Afferratelo.
+Lo afferri.
+Divertiti!
+Divertitevi!
+Si diverta!
+Ha parlato.
+Lui ha parlato.
+Parlò.
+Lui parlò.
+Provò.
+Lui provò.
+Prova.
+Lui prova.
+È bagnato.
+Lui è bagnato.
+Aiuta Tom.
+Aiutate Tom.
+Aiuti Tom.
+Che carino!
+Che carina!
+Che carini!
+Che carine!
+Quanto profondo?
+Quanto profonda?
+Quanto profondi?
+Quanto profonde?
+Che bella!
+Che belli!
+Che belle!
+Assecondami.
+Mi assecondi.
+Assecondatemi.
+Fammi ridere.
+Mi faccia ridere.
+Fatemi ridere.
+Svelto!
+Sbrigati!
+Sbrigatevi!
+Si sbrighi!
+Ero d'accordo.
+Io ero d'accordo.
+Sono Tom.
+Sono vecchio.
+Sono vecchia.
+L'ho mangiato.
+L'ho mangiata.
+Ho ruttato.
+Io ho ruttato.
+Ruttai.
+Ho cucinato.
+Cucinai.
+Ho imprecato.
+Imprecai.
+Ballai.
+Danzai.
+Ho fallito.
+Ho rantolato.
+Rantolai.
+Ho ansimato.
+Ansimai.
+Ho fatto lo scemo.
+Feci lo scemo.
+Ho fatto lo stupido.
+Feci lo stupido.
+Ho fatto il buffone.
+Feci il buffone.
+Ho capito.
+Ho compreso.
+Io ho capito.
+Io ho compreso.
+Aiutai.
+Ho saltato.
+Saltai.
+Ho guardato.
+Guardai.
+Ho gemuto.
+Gemetti.
+Ho frignato.
+Frignai.
+Gemettei.
+Ho annuito.
+Annuii.
+Ho ubbidito.
+Ho obbedito.
+Mi sono fermato.
+Mi sono fermata.
+Mi fermai.
+Mi sono interrotto.
+Mi sono interrotta.
+Ho telefonato.
+Io ho telefonato.
+Telefonai.
+Io telefonai.
+Ho pregato.
+Pregai.
+Mi rifiuto.
+Io mi rifiuto.
+Mi sono riposato.
+Mi sono riposata.
+Mi riposai.
+Mi sono rasato.
+Mi sono rasata.
+Mi rasai.
+Ho sospirato.
+Sospirai.
+Ho sorriso.
+Io ho sorriso.
+Sorrisi.
+Io sorrisi.
+Sono rimasto.
+Io sono rimasto.
+Sono rimasta.
+Io sono rimasta.
+Rimasi.
+Io rimasi.
+Restai.
+Io restai.
+Sono restato.
+Io sono restato.
+Sono restata.
+Io sono restata.
+Ho parlato.
+Parlai.
+Lo uso.
+La uso.
+Io lo uso.
+Io la uso.
+Lo utilizzo.
+Io lo utilizzo.
+La utilizzo.
+Io la utilizzo.
+Ho aspettato.
+Io ho aspettato.
+Aspettai.
+Io aspettai.
+Aspettavo.
+Io aspettavo.
+Ho fatto l'occhiolino.
+Feci l'occhiolino.
+Ho strizzato l'occhio.
+Strizzai l'occhio.
+Ho sbadigliato.
+Sbadigliai.
+Morirò.
+Io morirò.
+Pago io.
+Pagherò io.
+Vincerò.
+Io vincerò.
+Sono un DJ.
+Io sono un DJ.
+Sono una DJ.
+Io sono una DJ.
+Sono tornato.
+Sono ritornato.
+Sono tornata.
+Sono calvo.
+Io sono calvo.
+Sono calva.
+Io sono calva.
+Sono occupato.
+Sono impegnato.
+Io sono impegnato.
+Sono impegnata.
+Io sono impegnata.
+Io sono occupato.
+Sono occupata.
+Io sono occupata.
+Sono calmo.
+Io sono calmo.
+Sono calma.
+Io sono calma.
+Ho freddo.
+Sono figo.
+Io sono figo.
+Sono alla moda.
+Io sono alla moda.
+Sono sordo.
+Io sono sordo.
+Sono sorda.
+Io sono sorda.
+Ho finito.
+Io ho finito.
+Sono facile.
+Sono veloce.
+Io sono veloce.
+Sto bene.
+Mi sento bene.
+Io sono libero!
+Sono libero.
+Sono libera.
+Sono gratuito.
+Sono gratuita.
+Sono pieno.
+Sono piena.
+Io sono pieno.
+Io sono piena.
+Sono felice.
+Io sono felice.
+Io sono contento.
+Sono contenta.
+Io sono contenta.
+Sono qua.
+Sono qui.
+Io sono qui.
+Io sono qua.
+Sono a casa.
+Io sono a casa.
+Sono ferito.
+Io sono ferito.
+Sono ferita.
+Io sono ferita.
+Sono in ritardo.
+Io sono in ritardo.
+Sono pigro.
+Io sono pigro.
+Sono pigra.
+Io sono pigra.
+Sono perso.
+Io sono perso.
+Sono persa.
+Io sono persa.
+Sono meschino.
+Io sono meschino.
+Sono meschina.
+Io sono meschina.
+Sono insensibile.
+Io sono insensibile.
+Sono intorpidito.
+Io sono intorpidito.
+Sono intorpidita.
+Io sono intorpidita.
+Sono povero.
+Sono povera.
+Io sono povero.
+Io sono povera.
+Sono ricco.
+Io sono ricco.
+Sono ricca.
+Io sono ricca.
+Sono al sicuro.
+Io sono al sicuro.
+Sono malato.
+Sono malata.
+Sto male.
+Sono ammalato.
+Sono lento.
+Io sono lento.
+Sono lenta.
+Io sono lenta.
+Io sono positivo.
+Sono magro.
+Io sono magro.
+Sono magra.
+Io sono magra.
+Sono ordinato.
+Io sono ordinato.
+Sono ordinata.
+Io sono ordinata.
+Sono brutta.
+Sono brutto.
+Sono debole.
+Io sono debole.
+Sono saggio.
+Io sono saggio.
+Sono saggia.
+Io sono saggia.
+Aiuta.
+Mi fa male.
+Fa male.
+Funziona.
+È Tom.
+È grande.
+È divertente.
+È suo.
+È sua.
+Fa caldo.
+C'è caldo.
+È nuovo.
+È nuova.
+È strano.
+È strana.
+È rosso.
+È rossa.
+È triste.
+Non entrare.
+Uccidi Tom.
+Uccida Tom.
+Uccidete Tom.
+Bacia Tom.
+Baciate Tom.
+Baci Tom.
+Lascialo.
+Lasciala.
+Lo lasci.
+La lasci.
+Lasciatelo.
+Lasciatela.
+Lasciami.
+Lasciatemi.
+Mi lasci.
+Lasciaci.
+Lasciateci.
+Ci lasci.
+Andiamo!
+Andiamo!
+Attenzione!
+Occhio!
+Sposami.
+Sposatemi.
+Mi sposi.
+Povero cane.
