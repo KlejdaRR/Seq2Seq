@@ -42,12 +42,12 @@ checkpoint = torch.load("my_checkpoint.pth", map_location=device)
 load_checkpoint(checkpoint, model, optimizer=None)  # No need for optimizer in inference mode
 model.eval()  # Set model to evaluation mode
 
-def translate_user_input(model, german_vocab, english_vocab, device):
+def translate_user_input(model, italian_vocab, english_vocab, device):
     while True:
         sentence = input("\nEnter an Italian sentence (or type 'exit' to quit): ")
         if sentence.lower() == "exit":
             break
-        translated_sentence = translate_sentence(model, sentence, german_vocab, english_vocab, device)
+        translated_sentence = translate_sentence(model, sentence, italian_vocab, english_vocab, device)
         print("Translated Sentence:", " ".join(translated_sentence))
 
 # Load the saved model before using it for translation
