@@ -12,6 +12,9 @@ spacy_eng = spacy.load("en_core_web_sm")
 def tokenize_it(text):
     return [tok.text.lower() for tok in spacy_it.tokenizer(text)]
 
+def tokenize_eng(text):
+    return [tok.text.lower() for tok in spacy_eng.tokenizer(text)]
+
 # Function to translate a sentence from Italian to English using a trained model
 def translate_sentence(model, sentence, italian_vocab, english_vocab, device, max_length=50):
     tokens = tokenize_it(sentence)
@@ -75,7 +78,7 @@ def calculate_perplexity(model, data, italian_vocab, english_vocab, device):
             src_indices = [italian_vocab.word2index.get(token, 3) for token in src_tokens]
             src_tensor = torch.LongTensor(src_indices).unsqueeze(0).to(device)
 
-            trg_tokens = ["<sos>"] + trg.split() + ["<eos>"]
+            trg_tokens = ["<sos>"] + tokenize_eng(trg) + ["<eos>"]
             trg_indices = [english_vocab.word2index.get(token, 3) for token in trg_tokens]
             trg_tensor = torch.LongTensor(trg_indices).unsqueeze(0).to(device)
 

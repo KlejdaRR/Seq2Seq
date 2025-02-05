@@ -2,7 +2,7 @@ from models.encoder import Encoder
 from models.Seq2SeqWithAttention import Seq2SeqWithAttention
 from models.DecoderWithAttention import DecoderWithAttention
 from utils.dataset import Multi30kDataset, tokenize_it, tokenize_eng, Vocabulary, collate_fn
-from utils.train import train_model, save_checkpoint
+from utils.train import train_model, save_checkpoint, evaluate_model
 from utils.evaluate import bleu, calculate_perplexity
 from sklearn.model_selection import train_test_split
 import torch
@@ -41,27 +41,22 @@ model = Seq2SeqWithAttention(encoder_net, decoder_net).to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = torch.nn.CrossEntropyLoss(ignore_index=0)
 
+best_valid_loss = float('inf')
+
 for epoch in range(100):
     print(f"[Epoch {epoch + 1}/100]")
-    loss = train_model(model, train_iterator, optimizer, criterion, device)
-    print(f"Train Loss: {loss:.4f}")
+    train_loss = train_model(model, train_iterator, optimizer, criterion, device)
+    valid_loss = evaluate_model(model, valid_iterator, criterion, device)
+    print(f"Train Loss: {train_loss:.4f}, Valid Loss: {valid_loss:.4f}")
+
+    if valid_loss < best_valid_loss:
+        best_valid_loss = valid_loss
+        checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
+        save_checkpoint(checkpoint, filename="my_checkpoint.pth")
 
     if epoch % 20 == 0:
         for param_group in optimizer.param_groups:
             param_group['lr'] *= 0.7
-
-    if epoch % 10 == 0:
-        with torch.no_grad():
-            sample_src, sample_tgt = next(iter(train_iterator))
-            sample_src = sample_src[0].unsqueeze(0).to(device)
-            sample_tgt = sample_tgt[0].unsqueeze(0).to(device)
-            output = model(sample_src, sample_tgt, teacher_force_ratio=0)  # No teacher forcing in inference
-
-        output_indices = output.argmax(2).squeeze().tolist()
-        translated_sentence = [english_vocab.index2word.get(idx, "<unk>") for idx in output_indices]
-
-    checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
-    save_checkpoint(checkpoint, filename="my_checkpoint.pth")
 
 bleu_score = bleu(test_data, model, italian_vocab, english_vocab, device)
 print(f"\nFinal BLEU Score on Test Data: {bleu_score:.4f}")

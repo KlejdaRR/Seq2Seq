@@ -24,7 +24,7 @@ def evaluate_model(model, iterator, criterion, device):
     with torch.no_grad():
         for inp_data, target in iterator:
             inp_data, target = inp_data.to(device), target.to(device)
-            output = model(inp_data, target, teacher_force_ratio=0)  # No teacher forcing during evaluation
+            output = model(inp_data, target, teacher_force_ratio=0)
             output = output[:, 1:].reshape(-1, output.shape[2])
             target = target[:, 1:].reshape(-1)
             loss = criterion(output, target)
