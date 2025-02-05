@@ -1,6 +1,7 @@
 import torch
 import spacy
 from nltk.translate.bleu_score import sentence_bleu
+from nltk.translate.bleu_score import SmoothingFunction
 
 # Load SpaCy tokenizers for Italian and English
 spacy_it = spacy.load("it_core_news_sm")
@@ -39,7 +40,8 @@ def translate_sentence(model, sentence, italian_vocab, english_vocab, device, ma
     return translated_sentence[1:-1]
 
 # Function to compute the BLEU score for evaluating translation quality
-def bleu(data, model, german_vocab, english_vocab, device):
+def bleu(data, model, italian_vocab, english_vocab, device):
+    chencherry = SmoothingFunction()  # Smoothing function for BLEU
     targets = []
     outputs = []
 
@@ -47,10 +49,10 @@ def bleu(data, model, german_vocab, english_vocab, device):
         src = example[0]
         trg = example[1]
 
-        prediction = translate_sentence(model, src, german_vocab, english_vocab, device)
-        prediction = prediction[:-1]
+        prediction = translate_sentence(model, src, italian_vocab, english_vocab, device)
+        prediction = prediction[:-1]  # Remove final token
 
         targets.append([trg.split()])
         outputs.append(prediction)
 
-    return sum(sentence_bleu(ref, pred) for ref, pred in zip(targets, outputs)) / len(outputs)
+    return sum(sentence_bleu(ref, pred, smoothing_function=chencherry.method1) for ref, pred in zip(targets, outputs)) / len(outputs)
