@@ -3,7 +3,7 @@ from models.Seq2SeqWithAttention import Seq2SeqWithAttention
 from models.DecoderWithAttention import DecoderWithAttention
 from utils.dataset import Multi30kDataset, tokenize_it, tokenize_eng, Vocabulary, collate_fn
 from utils.train import train_model, save_checkpoint
-from utils.evaluate import bleu
+from utils.evaluate import bleu, calculate_perplexity
 from sklearn.model_selection import train_test_split
 import torch
 import torch.optim as optim
@@ -28,7 +28,7 @@ english_vocab.finalize_vocab()
 torch.save(italian_vocab, "italian_vocab.pth")
 torch.save(english_vocab, "english_vocab.pth")
 
-# Create data loaders
+# Creation data loaders
 train_iterator = DataLoader(train_data, batch_size=64, shuffle=True, collate_fn=lambda x: collate_fn(x, italian_vocab, english_vocab), drop_last=True)
 valid_iterator = DataLoader(valid_data, batch_size=64, shuffle=False, collate_fn=lambda x: collate_fn(x, italian_vocab, english_vocab), drop_last=True)
 test_iterator = DataLoader(test_data, batch_size=64, shuffle=False, collate_fn=lambda x: collate_fn(x, italian_vocab, english_vocab), drop_last=True)
@@ -41,7 +41,6 @@ model = Seq2SeqWithAttention(encoder_net, decoder_net).to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = torch.nn.CrossEntropyLoss(ignore_index=0)
 
-# Training loop
 for epoch in range(100):
     print(f"[Epoch {epoch + 1}/100]")
     loss = train_model(model, train_iterator, optimizer, criterion, device)
@@ -61,9 +60,11 @@ for epoch in range(100):
         output_indices = output.argmax(2).squeeze().tolist()
         translated_sentence = [english_vocab.index2word.get(idx, "<unk>") for idx in output_indices]
 
-    # Save checkpoint
     checkpoint = {"state_dict": model.state_dict(), "optimizer": optimizer.state_dict()}
     save_checkpoint(checkpoint, filename="my_checkpoint.pth")
 
 bleu_score = bleu(test_data, model, italian_vocab, english_vocab, device)
 print(f"\nFinal BLEU Score on Test Data: {bleu_score:.4f}")
+
+perplexity_score = calculate_perplexity(model, test_data, italian_vocab, english_vocab, device)
+print(f"Perplexity Score: {perplexity_score}")

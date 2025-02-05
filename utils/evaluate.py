@@ -2,6 +2,8 @@ import torch
 import spacy
 from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.bleu_score import SmoothingFunction
+import torch.nn.functional as F
+
 
 # Load SpaCy tokenizers for Italian and English
 spacy_it = spacy.load("it_core_news_sm")
@@ -56,3 +58,37 @@ def bleu(data, model, italian_vocab, english_vocab, device):
         outputs.append(prediction)
 
     return sum(sentence_bleu(ref, pred, smoothing_function=chencherry.method1) for ref, pred in zip(targets, outputs)) / len(outputs)
+
+
+
+def calculate_perplexity(model, data, italian_vocab, english_vocab, device):
+    model.eval()
+    total_loss = 0
+    total_tokens = 0
+
+    with torch.no_grad():
+        for example in data:
+            src = example[0]
+            trg = example[1]
+
+            src_tokens = ["<sos>"] + tokenize_it(src) + ["<eos>"]
+            src_indices = [italian_vocab.word2index.get(token, 3) for token in src_tokens]
+            src_tensor = torch.LongTensor(src_indices).unsqueeze(0).to(device)
+
+            trg_tokens = ["<sos>"] + trg.split() + ["<eos>"]
+            trg_indices = [english_vocab.word2index.get(token, 3) for token in trg_tokens]
+            trg_tensor = torch.LongTensor(trg_indices).unsqueeze(0).to(device)
+
+            output = model(src_tensor, trg_tensor, teacher_force_ratio=0)
+
+            output = output[:, 1:].reshape(-1, output.shape[2])
+            trg = trg_tensor[:, 1:].reshape(-1)
+
+            loss = F.cross_entropy(output, trg, ignore_index=english_vocab.word2index["<pad>"])
+            total_loss += loss.item() * (trg != english_vocab.word2index["<pad>"]).sum().item()
+            total_tokens += (trg != english_vocab.word2index["<pad>"]).sum().item()
+
+    avg_loss = total_loss / total_tokens
+    perplexity = torch.exp(torch.tensor(avg_loss)).item()
+
+    return perplexity
